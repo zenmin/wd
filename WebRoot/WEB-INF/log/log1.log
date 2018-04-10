@@ -1,0 +1,476 @@
+[2017-07-20 10:30:41 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:273}-Root WebApplicationContext: initialization started
+[2017-07-20 10:30:41 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:495}-Refreshing Root WebApplicationContext: startup date [Thu Jul 20 10:30:41 CST 2017]; root of context hierarchy
+[2017-07-20 10:30:41 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315}-Loading XML bean definitions from class path resource [applicationContext.xml]
+[2017-07-20 10:30:41 INFO ] [localhost-startStop-1] {com.mchange.v2.log.MLog:80}-MLog clients using log4j logging.
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.C3P0Registry:204}-Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:560}-Hibernate 3.3.2.GA
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:593}-hibernate.properties not found
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:771}-Bytecode provider name : javassist
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:652}-using JDK 1.4 java.sql.Timestamp handling
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBar -> tb_bar
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbClass -> tb_class
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGoods -> tb_goods
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbReturns -> tb_returns
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSales -> tb_sales
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSpecial -> tb_special
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbUser -> tb_user
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbStock -> tb_stock
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBwl -> tb_bwl
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGg -> tb_gg
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbClass.tbGoodses -> tb_goods
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbGoods.tbBars -> tb_bar
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbSpecial.tbSaleses -> tb_sales
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.LocalSessionFactoryBean:777}-Building new Hibernate SessionFactory
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {org.hibernate.connection.ConnectionProviderFactory:95}-Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2017-07-20 10:30:42 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462}-Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq19rgx999cx0|2af4336e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq19rgx999cx0|2af4336e, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:114}-RDBMS: MySQL, version: 5.6.17
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:115}-JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.dialect.Dialect:175}-Using dialect: org.hibernate.dialect.MySQLDialect
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionFactoryFactory:62}-Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionManagerLookupFactory:80}-No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:161}-Automatic flush during beforeCompletion(): disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:165}-Automatic session close at end of transaction: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:172}-JDBC batch size: 15
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:175}-JDBC batch updates for versioned data: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:180}-Scrollable result sets: enabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:188}-JDBC3 getGeneratedKeys(): enabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:196}-Connection release mode: auto
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:220}-Maximum outer join fetch depth: 2
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:223}-Default batch fetch size: 1
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:227}-Generate SQL with comments: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:231}-Order SQL updates by primary key: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:235}-Order SQL inserts for batching: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:397}-Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.hql.ast.ASTQueryTranslatorFactory:47}-Using ASTQueryTranslatorFactory
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:243}-Query language substitutions: {}
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:248}-JPA-QL strict compliance: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:253}-Second-level cache: enabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:257}-Query cache: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:382}-Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:267}-Optimize cache for minimal puts: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:276}-Structured second-level cache entries: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:296}-Echoing all SQL to stdout
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:305}-Statistics: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:309}-Deleted entity synthetic identifier rollback: disabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:324}-Default entity-mode: pojo
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:328}-Named query checking : enabled
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryImpl:193}-building session factory
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryObjectFactory:105}-Not binding factory to JNDI, no JNDI name configured
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.support.DefaultListableBeanFactory:557}-Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@67fe5cb7: defining beans [dataSource,sessionFactory,transactionManager,txTemplate,persistenceExceptionTranslationPostProcessor,baseDAO,SpecialDAO,SpecialService,SpecialAction,SalesDAO,SalesService,SalesAction,ReturnsDAO,ReturnsService,ReturnsAction,StockDAO,StockService,StcokAction,updateAction,IndexDAO,IndexService,IndexAction,UserDAO,UserService,UserAction,showBarDAO,showBarService,showBarAction,showGoodsDAO,showGoodsService,showGoodsAction,updateBarAndGoodsDAO,updateBarAndGoodsService,updateBarAndGoodsAction,readBarAndGoods]; root of factory hierarchy
+[2017-07-20 10:30:43 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.HibernateTransactionManager:415}-Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq19rgx999cx0|2af4336e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq19rgx999cx0|2af4336e, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:302}-Root WebApplicationContext: initialization completed in 2562 ms
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-default.xml]
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-plugin.xml]
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts.xml]
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-Initializing Struts-Spring integration...
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.spring.SpringObjectFactory:42}-Setting autowire strategy to name
+[2017-07-20 10:30:44 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 10:31:07 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:31:08 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:31:33 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 10:31:45 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_18b59731_15d5dd605ce__8000_00000000.tmp
+[2017-07-20 10:32:33 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:32:33 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 10:31:07 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:31:08 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:31:33 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 10:31:45 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_18b59731_15d5dd605ce__8000_00000000.tmp
+[2017-07-20 10:32:33 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 10:32:33 WARN ] [http-bio-8080-exec-3] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:273}-Root WebApplicationContext: initialization started
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:273}-Root WebApplicationContext: initialization started
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:495}-Refreshing Root WebApplicationContext: startup date [Thu Jul 20 12:40:06 CST 2017]; root of context hierarchy
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:495}-Refreshing Root WebApplicationContext: startup date [Thu Jul 20 12:40:06 CST 2017]; root of context hierarchy
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315}-Loading XML bean definitions from class path resource [applicationContext.xml]
+[2017-07-20 12:40:06 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315}-Loading XML bean definitions from class path resource [applicationContext.xml]
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.log.MLog:80}-MLog clients using log4j logging.
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.log.MLog:80}-MLog clients using log4j logging.
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.C3P0Registry:204}-Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.C3P0Registry:204}-Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:560}-Hibernate 3.3.2.GA
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:560}-Hibernate 3.3.2.GA
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:593}-hibernate.properties not found
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:593}-hibernate.properties not found
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:771}-Bytecode provider name : javassist
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:771}-Bytecode provider name : javassist
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:652}-using JDK 1.4 java.sql.Timestamp handling
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:652}-using JDK 1.4 java.sql.Timestamp handling
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBar -> tb_bar
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBar -> tb_bar
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbClass -> tb_class
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbClass -> tb_class
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGoods -> tb_goods
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGoods -> tb_goods
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbReturns -> tb_returns
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbReturns -> tb_returns
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSales -> tb_sales
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSales -> tb_sales
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSpecial -> tb_special
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSpecial -> tb_special
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbUser -> tb_user
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbUser -> tb_user
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbStock -> tb_stock
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbStock -> tb_stock
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBwl -> tb_bwl
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBwl -> tb_bwl
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGg -> tb_gg
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGg -> tb_gg
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbClass.tbGoodses -> tb_goods
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbClass.tbGoodses -> tb_goods
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbGoods.tbBars -> tb_bar
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbGoods.tbBars -> tb_bar
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbSpecial.tbSaleses -> tb_sales
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbSpecial.tbSaleses -> tb_sales
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.LocalSessionFactoryBean:777}-Building new Hibernate SessionFactory
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.LocalSessionFactoryBean:777}-Building new Hibernate SessionFactory
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.connection.ConnectionProviderFactory:95}-Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {org.hibernate.connection.ConnectionProviderFactory:95}-Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462}-Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq5w70x1mi7syp|24dc7c05, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq5w70x1mi7syp|24dc7c05, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[2017-07-20 12:40:07 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462}-Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq5w70x1mi7syp|24dc7c05, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq5w70x1mi7syp|24dc7c05, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:114}-RDBMS: MySQL, version: 5.6.17
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:114}-RDBMS: MySQL, version: 5.6.17
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:115}-JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:115}-JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.dialect.Dialect:175}-Using dialect: org.hibernate.dialect.MySQLDialect
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.dialect.Dialect:175}-Using dialect: org.hibernate.dialect.MySQLDialect
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionFactoryFactory:62}-Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionFactoryFactory:62}-Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionManagerLookupFactory:80}-No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionManagerLookupFactory:80}-No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:161}-Automatic flush during beforeCompletion(): disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:161}-Automatic flush during beforeCompletion(): disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:165}-Automatic session close at end of transaction: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:165}-Automatic session close at end of transaction: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:172}-JDBC batch size: 15
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:172}-JDBC batch size: 15
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:175}-JDBC batch updates for versioned data: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:175}-JDBC batch updates for versioned data: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:180}-Scrollable result sets: enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:180}-Scrollable result sets: enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:188}-JDBC3 getGeneratedKeys(): enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:188}-JDBC3 getGeneratedKeys(): enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:196}-Connection release mode: auto
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:196}-Connection release mode: auto
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:220}-Maximum outer join fetch depth: 2
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:220}-Maximum outer join fetch depth: 2
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:223}-Default batch fetch size: 1
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:223}-Default batch fetch size: 1
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:227}-Generate SQL with comments: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:227}-Generate SQL with comments: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:231}-Order SQL updates by primary key: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:231}-Order SQL updates by primary key: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:235}-Order SQL inserts for batching: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:235}-Order SQL inserts for batching: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:397}-Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:397}-Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.hql.ast.ASTQueryTranslatorFactory:47}-Using ASTQueryTranslatorFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.hql.ast.ASTQueryTranslatorFactory:47}-Using ASTQueryTranslatorFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:243}-Query language substitutions: {}
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:243}-Query language substitutions: {}
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:248}-JPA-QL strict compliance: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:248}-JPA-QL strict compliance: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:253}-Second-level cache: enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:253}-Second-level cache: enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:257}-Query cache: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:257}-Query cache: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:382}-Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:382}-Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:267}-Optimize cache for minimal puts: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:267}-Optimize cache for minimal puts: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:276}-Structured second-level cache entries: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:276}-Structured second-level cache entries: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:296}-Echoing all SQL to stdout
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:296}-Echoing all SQL to stdout
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:305}-Statistics: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:305}-Statistics: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:309}-Deleted entity synthetic identifier rollback: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:309}-Deleted entity synthetic identifier rollback: disabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:324}-Default entity-mode: pojo
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:324}-Default entity-mode: pojo
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:328}-Named query checking : enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:328}-Named query checking : enabled
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryImpl:193}-building session factory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryImpl:193}-building session factory
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryObjectFactory:105}-Not binding factory to JNDI, no JNDI name configured
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryObjectFactory:105}-Not binding factory to JNDI, no JNDI name configured
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.support.DefaultListableBeanFactory:557}-Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3d5e9b7b: defining beans [dataSource,sessionFactory,transactionManager,txTemplate,persistenceExceptionTranslationPostProcessor,baseDAO,SpecialDAO,SpecialService,SpecialAction,SalesDAO,SalesService,SalesAction,ReturnsDAO,ReturnsService,ReturnsAction,StockDAO,StockService,StcokAction,updateAction,IndexDAO,IndexService,IndexAction,UserDAO,UserService,UserAction,showBarDAO,showBarService,showBarAction,showGoodsDAO,showGoodsService,showGoodsAction,updateBarAndGoodsDAO,updateBarAndGoodsService,updateBarAndGoodsAction,readBarAndGoods]; root of factory hierarchy
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.support.DefaultListableBeanFactory:557}-Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3d5e9b7b: defining beans [dataSource,sessionFactory,transactionManager,txTemplate,persistenceExceptionTranslationPostProcessor,baseDAO,SpecialDAO,SpecialService,SpecialAction,SalesDAO,SalesService,SalesAction,ReturnsDAO,ReturnsService,ReturnsAction,StockDAO,StockService,StcokAction,updateAction,IndexDAO,IndexService,IndexAction,UserDAO,UserService,UserAction,showBarDAO,showBarService,showBarAction,showGoodsDAO,showGoodsService,showGoodsAction,updateBarAndGoodsDAO,updateBarAndGoodsService,updateBarAndGoodsAction,readBarAndGoods]; root of factory hierarchy
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.HibernateTransactionManager:415}-Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq5w70x1mi7syp|24dc7c05, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq5w70x1mi7syp|24dc7c05, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[2017-07-20 12:40:08 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.HibernateTransactionManager:415}-Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq5w70x1mi7syp|24dc7c05, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq5w70x1mi7syp|24dc7c05, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:302}-Root WebApplicationContext: initialization completed in 2490 ms
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:302}-Root WebApplicationContext: initialization completed in 2490 ms
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-default.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-default.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-plugin.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-plugin.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts.xml]
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-Initializing Struts-Spring integration...
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-Initializing Struts-Spring integration...
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.spring.SpringObjectFactory:42}-Setting autowire strategy to name
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.spring.SpringObjectFactory:42}-Setting autowire strategy to name
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 12:40:09 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 12:40:27 WARN ] [http-bio-8080-exec-9] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:40:27 WARN ] [http-bio-8080-exec-9] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:40:27 WARN ] [http-bio-8080-exec-9] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:40:27 WARN ] [http-bio-8080-exec-9] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:40:31 INFO ] [http-bio-8080-exec-9] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 12:40:31 INFO ] [http-bio-8080-exec-9] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:273}-Root WebApplicationContext: initialization started
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:273}-Root WebApplicationContext: initialization started
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:495}-Refreshing Root WebApplicationContext: startup date [Thu Jul 20 12:48:23 CST 2017]; root of context hierarchy
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:495}-Refreshing Root WebApplicationContext: startup date [Thu Jul 20 12:48:23 CST 2017]; root of context hierarchy
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315}-Loading XML bean definitions from class path resource [applicationContext.xml]
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315}-Loading XML bean definitions from class path resource [applicationContext.xml]
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {com.mchange.v2.log.MLog:80}-MLog clients using log4j logging.
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {com.mchange.v2.log.MLog:80}-MLog clients using log4j logging.
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.C3P0Registry:204}-Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.C3P0Registry:204}-Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:560}-Hibernate 3.3.2.GA
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:560}-Hibernate 3.3.2.GA
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:593}-hibernate.properties not found
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:593}-hibernate.properties not found
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:771}-Bytecode provider name : javassist
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:771}-Bytecode provider name : javassist
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:652}-using JDK 1.4 java.sql.Timestamp handling
+[2017-07-20 12:48:23 INFO ] [localhost-startStop-1] {org.hibernate.cfg.Environment:652}-using JDK 1.4 java.sql.Timestamp handling
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBar -> tb_bar
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBar -> tb_bar
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbClass -> tb_class
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbClass -> tb_class
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGoods -> tb_goods
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGoods -> tb_goods
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbReturns -> tb_returns
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbReturns -> tb_returns
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSales -> tb_sales
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSales -> tb_sales
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSpecial -> tb_special
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbSpecial -> tb_special
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbUser -> tb_user
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbUser -> tb_user
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbStock -> tb_stock
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbStock -> tb_stock
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBwl -> tb_bwl
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbBwl -> tb_bwl
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGg -> tb_gg
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:322}-Mapping class: com.wd.models.TbGg -> tb_gg
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbClass.tbGoodses -> tb_goods
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbClass.tbGoodses -> tb_goods
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbGoods.tbBars -> tb_bar
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbGoods.tbBars -> tb_bar
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbSpecial.tbSaleses -> tb_sales
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.HbmBinder:2404}-Mapping collection: com.wd.models.TbSpecial.tbSaleses -> tb_sales
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.LocalSessionFactoryBean:777}-Building new Hibernate SessionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.LocalSessionFactoryBean:777}-Building new Hibernate SessionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.connection.ConnectionProviderFactory:95}-Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.connection.ConnectionProviderFactory:95}-Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462}-Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq66u3g1r3kacj|145d958f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq66u3g1r3kacj|145d958f, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462}-Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq66u3g1r3kacj|145d958f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq66u3g1r3kacj|145d958f, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:114}-RDBMS: MySQL, version: 5.6.17
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:114}-RDBMS: MySQL, version: 5.6.17
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:115}-JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:115}-JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.dialect.Dialect:175}-Using dialect: org.hibernate.dialect.MySQLDialect
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.dialect.Dialect:175}-Using dialect: org.hibernate.dialect.MySQLDialect
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionFactoryFactory:62}-Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionFactoryFactory:62}-Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionManagerLookupFactory:80}-No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.transaction.TransactionManagerLookupFactory:80}-No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:161}-Automatic flush during beforeCompletion(): disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:161}-Automatic flush during beforeCompletion(): disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:165}-Automatic session close at end of transaction: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:165}-Automatic session close at end of transaction: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:172}-JDBC batch size: 15
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:172}-JDBC batch size: 15
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:175}-JDBC batch updates for versioned data: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:175}-JDBC batch updates for versioned data: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:180}-Scrollable result sets: enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:180}-Scrollable result sets: enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:188}-JDBC3 getGeneratedKeys(): enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:188}-JDBC3 getGeneratedKeys(): enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:196}-Connection release mode: auto
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:196}-Connection release mode: auto
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:220}-Maximum outer join fetch depth: 2
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:220}-Maximum outer join fetch depth: 2
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:223}-Default batch fetch size: 1
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:223}-Default batch fetch size: 1
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:227}-Generate SQL with comments: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:227}-Generate SQL with comments: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:231}-Order SQL updates by primary key: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:231}-Order SQL updates by primary key: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:235}-Order SQL inserts for batching: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:235}-Order SQL inserts for batching: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:397}-Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:397}-Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.hql.ast.ASTQueryTranslatorFactory:47}-Using ASTQueryTranslatorFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.hql.ast.ASTQueryTranslatorFactory:47}-Using ASTQueryTranslatorFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:243}-Query language substitutions: {}
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:243}-Query language substitutions: {}
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:248}-JPA-QL strict compliance: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:248}-JPA-QL strict compliance: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:253}-Second-level cache: enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:253}-Second-level cache: enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:257}-Query cache: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:257}-Query cache: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:382}-Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:382}-Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:267}-Optimize cache for minimal puts: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:267}-Optimize cache for minimal puts: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:276}-Structured second-level cache entries: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:276}-Structured second-level cache entries: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:296}-Echoing all SQL to stdout
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:296}-Echoing all SQL to stdout
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:305}-Statistics: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:305}-Statistics: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:309}-Deleted entity synthetic identifier rollback: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:309}-Deleted entity synthetic identifier rollback: disabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:324}-Default entity-mode: pojo
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:324}-Default entity-mode: pojo
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:328}-Named query checking : enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.cfg.SettingsFactory:328}-Named query checking : enabled
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryImpl:193}-building session factory
+[2017-07-20 12:48:24 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryImpl:193}-building session factory
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryObjectFactory:105}-Not binding factory to JNDI, no JNDI name configured
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.hibernate.impl.SessionFactoryObjectFactory:105}-Not binding factory to JNDI, no JNDI name configured
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.web.context.support.XmlWebApplicationContext:1350}-Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.support.DefaultListableBeanFactory:557}-Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@49bb3961: defining beans [dataSource,sessionFactory,transactionManager,txTemplate,persistenceExceptionTranslationPostProcessor,baseDAO,SpecialDAO,SpecialService,SpecialAction,SalesDAO,SalesService,SalesAction,ReturnsDAO,ReturnsService,ReturnsAction,StockDAO,StockService,StcokAction,updateAction,IndexDAO,IndexService,IndexAction,UserDAO,UserService,UserAction,showBarDAO,showBarService,showBarAction,showGoodsDAO,showGoodsService,showGoodsAction,updateBarAndGoodsDAO,updateBarAndGoodsService,updateBarAndGoodsAction,readBarAndGoods]; root of factory hierarchy
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.beans.factory.support.DefaultListableBeanFactory:557}-Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@49bb3961: defining beans [dataSource,sessionFactory,transactionManager,txTemplate,persistenceExceptionTranslationPostProcessor,baseDAO,SpecialDAO,SpecialService,SpecialAction,SalesDAO,SalesService,SalesAction,ReturnsDAO,ReturnsService,ReturnsAction,StockDAO,StockService,StcokAction,updateAction,IndexDAO,IndexService,IndexAction,UserDAO,UserService,UserAction,showBarDAO,showBarService,showBarAction,showGoodsDAO,showGoodsService,showGoodsAction,updateBarAndGoodsDAO,updateBarAndGoodsService,updateBarAndGoodsAction,readBarAndGoods]; root of factory hierarchy
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.HibernateTransactionManager:415}-Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq66u3g1r3kacj|145d958f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq66u3g1r3kacj|145d958f, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.orm.hibernate3.HibernateTransactionManager:415}-Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 100, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1679pq66u3g1r3kacj|145d958f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1679pq66u3g1r3kacj|145d958f, idleConnectionTestPeriod -> 18000, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:302}-Root WebApplicationContext: initialization completed in 2228 ms
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.springframework.web.context.ContextLoader:302}-Root WebApplicationContext: initialization completed in 2228 ms
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-default.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-default.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-plugin.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts-plugin.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.config.providers.XmlConfigurationProvider:42}-Parsing configuration file [struts.xml]
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.config.BeanSelectionProvider:42}-Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-Initializing Struts-Spring integration...
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-Initializing Struts-Spring integration...
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.spring.SpringObjectFactory:42}-Setting autowire strategy to name
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {com.opensymphony.xwork2.spring.SpringObjectFactory:42}-Setting autowire strategy to name
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 12:48:25 INFO ] [localhost-startStop-1] {org.apache.struts2.spring.StrutsSpringObjectFactory:42}-... initialized Struts-Spring integration successfully
+[2017-07-20 12:48:29 WARN ] [http-bio-8080-exec-1] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:29 WARN ] [http-bio-8080-exec-1] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:30 WARN ] [http-bio-8080-exec-1] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:30 WARN ] [http-bio-8080-exec-1] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:35 WARN ] [http-bio-8080-exec-10] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:35 WARN ] [http-bio-8080-exec-10] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:35 WARN ] [http-bio-8080-exec-10] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:35 WARN ] [http-bio-8080-exec-10] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:48:40 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 12:48:40 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir
+[2017-07-20 12:48:43 WARN ] [http-bio-8080-exec-10] {org.hibernate.util.JDBCExceptionReporter:100}-SQL Error: 0, SQLState: 22001
+[2017-07-20 12:48:43 WARN ] [http-bio-8080-exec-10] {org.hibernate.util.JDBCExceptionReporter:100}-SQL Error: 0, SQLState: 22001
+[2017-07-20 12:48:43 ERROR] [http-bio-8080-exec-10] {org.hibernate.util.JDBCExceptionReporter:101}-Data truncation: Incorrect date value: 'https://www.vip.com/detail-1113291-169334335.html' for column 'date' at row 1
+[2017-07-20 12:48:43 ERROR] [http-bio-8080-exec-10] {org.hibernate.util.JDBCExceptionReporter:101}-Data truncation: Incorrect date value: 'https://www.vip.com/detail-1113291-169334335.html' for column 'date' at row 1
+[2017-07-20 12:48:43 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_1e934a30_15d5e538c7c__8000_00000000.tmp
+[2017-07-20 12:48:43 INFO ] [http-bio-8080-exec-10] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_1e934a30_15d5e538c7c__8000_00000000.tmp
+[2017-07-20 12:51:48 INFO ] [http-bio-8080-exec-4] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_1e934a30_15d5e538c7c__8000_00000001.tmp
+[2017-07-20 12:51:48 INFO ] [http-bio-8080-exec-4] {org.apache.struts2.dispatcher.Dispatcher:42}-Removing file sales C:\Java\apache-tomcat-7.0.78\work\Catalina\localhost\wd\upload_1e934a30_15d5e538c7c__8000_00000001.tmp
+[2017-07-20 12:52:21 WARN ] [http-bio-8080-exec-6] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:52:21 WARN ] [http-bio-8080-exec-6] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:52:21 WARN ] [http-bio-8080-exec-6] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.
+[2017-07-20 12:52:21 WARN ] [http-bio-8080-exec-6] {org.apache.struts2.components.ServletUrlRenderer:56}-No configuration found for the specified action: '' in namespace: ''. Form action defaulting to 'action' attribute's literal value.

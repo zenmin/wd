@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.action.extension" value=","></constant>
+	<package name="index" extends="struts-default">
+		<action name="login" class="IndexAction" method="checkUser">
+			<result name="success" type="redirect">index.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="input">login.jsp</result>
+		</action>
+		<!-- 首页数据 -->
+		<action name="bwl" class="IndexAction" method="getBwl" />
+		<action name="deleteBwl" class="IndexAction" method="deleteBwl" />
+		<action name="addBwl" class="IndexAction" method="addBwl" />
+		<action name="showGg" class="IndexAction" method="showGg" />
+		<action name="addGg" class="IndexAction" method="addGg" />
+		<action name="delGg" class="IndexAction" method="delGg" />
+		<action name="showCount" class="IndexAction" method="showCount" />
+		<action name="alterPass" class="UserAction" method="alterPass" />
+		<!-- 注销 -->
+		<action name="logoff" class="UserAction" method="removeUser">
+			<result name="success" type="redirect">/login.jsp</result>
+		</action>
+
+		<!-- 用户管理 -->
+		<action name="getUser" class="UserAction" method="getAllUser"></action>
+		<action name="addUser" class="UserAction" method="addUser" />
+		<action name="delUser" class="UserAction" method="delUser" />
+		<action name="delData" class="UserAction" method="removeData" />
+	</package>
+	<!-- 档期资料 -->
+	<package name="special" extends="struts-default">
+		<action name="special" class="SpecialAction" method="showSpecial">
+			<result name="success">/special.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="editspecial" class="SpecialAction" method="editSpecial">
+			<result name="success">/editspecial.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="addspecial" class="SpecialAction" method="addSpecial">
+			<result name="success" type="redirectAction">
+				<param name="actionName">special</param>
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="updatespecial" class="SpecialAction" method="updateSpecial">
+			<result name="success" type="redirectAction">
+				<param name="actionName">special</param>
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="deleteSpecial" class="SpecialAction" method="deleteSpecial">
+			<result name="success" type="redirectAction">
+				<param name="actionName">special</param>
+			</result>
+			<result name="error" type="dispatcher">error.jsp</result>
+		</action>
+
+		<action name="findSpecial" class="SpecialAction" method="findSpecial">
+			<result>special.jsp</result>
+		</action>
+		<action name="getMaxCount" class="SpecialAction" method="getMaxCount" />
+
+	</package>
+
+	<!-- 销售资料 -->
+	<package name="sales" extends="struts-default">
+		<action name="sales" class="SalesAction" method="showSales" />
+		<action name="findSales" class="SalesAction" method="findSales" />
+
+		<action name="findAndExportSales" class="SalesAction" method="findAndExportSales">
+			<result name="success" type="stream">
+				<!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找 -->
+				<param name="contentType">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</param>
+				<!-- 返回流 excelStream为action中的流变量名称 -->
+				<param name="inputName">downloadSalesFile</param>
+				<!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。 fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量 -->
+				<param name="contentDisposition">attachment;fileName="${downloadName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">exportSales.jsp</result>
+		</action>
+	</package>
+
+	<!-- 资料更新 -->
+	<!-- 销售数据更新 -->
+	<!-- 文件上传配置 -->
+	<constant name="struts.multipart.maxSize" value="100000000" />
+	<package name="updateData" extends="struts-default" namespace="/">
+		<!-- 显示上传结果页面 -->
+		<action name="updateSales" class="updateAction" method="updateSales">
+			<!-- 配置名字为fileUpload的拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 配置允许上传的文件类型 -->
+				<param name="allowedTypes">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel</param>
+				<!-- 配置允许上传文件的大小(单位字节) -->
+				<param name="maximumSize">80000000</param>
+			</interceptor-ref>
+
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+
+			<!-- 动态设置保存文件的路径 给Action中的savePath属性赋值 -->
+			<param name="savePath">/upload</param>
+
+			<!-- 配置struts2的默认视图 -->
+			<!-- <result name="invalid.token">/error.jsp</result> -->
+			<result name="error">/error.jsp</result>
+			<result name="input">/input.jsp</result>
+		</action>
+
+
+	</package>
+
+	<!-- 客退数据 -->
+	<package name="Returns" extends="struts-default" namespace="/">
+		<!-- 查询 -->
+		<action name="findReturns" class="ReturnsAction" method="findReturns">
+			<result name="success">returns.jsp</result>
+		</action>
+
+		<!-- 导出 -->
+		<action name="exportReturns" class="ReturnsAction" method="ExportReturns">
+			<result name="success" type="stream">
+				<!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找 -->
+				<param name="contentType">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</param>
+				<!-- 返回流 excelStream为action中的流变量名称 -->
+				<param name="inputName">downloadFile</param>
+				<!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。 fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量 -->
+				<param name="contentDisposition">attachment;fileName="${downloadName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">exportReturns.jsp</result>
+		</action>
+		<!-- 更新 -->
+		<action name="updateReturns" class="updateAction" method="updateReturns">
+			<!-- 配置名字为fileUpload的拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 配置允许上传的文件类型 -->
+				<param name="allowedTypes">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel</param>
+				<!-- 配置允许上传文件的大小(单位字节) -->
+				<param name="maximumSize">80000000</param>
+			</interceptor-ref>
+
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="error">/error.jsp</result>
+			<result name="input">/input.jsp</result>
+		</action>
+	</package>
+	<!-- 实时库存 -->
+	<package name="Stock" extends="struts-default" namespace="/">
+		<action name="findStock" class="StcokAction" method="findStock">
+			<result name="error">/error.jsp</result>
+		</action>
+
+
+		<!-- 更新 -->
+		<action name="updateStock" class="updateAction" method="updateStock">
+			<!-- 配置名字为fileUpload的拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 配置允许上传的文件类型 -->
+				<param name="allowedTypes">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel</param>
+				<!-- 配置允许上传文件的大小(单位字节) -->
+				<param name="maximumSize">80000000</param>
+			</interceptor-ref>
+
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="error">/error.jsp</result>
+			<!-- <result name="input">/input.jsp</result> -->
+		</action>
+
+		<!-- 导出 -->
+		<action name="exportStock" class="StcokAction" method="ExportStock">
+			<result name="success" type="stream">
+				<!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找 -->
+				<param name="contentType">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</param>
+				<!-- 返回流 excelStream为action中的流变量名称 -->
+				<param name="inputName">downloadFile</param>
+				<!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。 fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量 -->
+				<param name="contentDisposition">attachment;fileName="${downloadName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">exportStock.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="BarAndGoods" namespace="/" extends="struts-default">
+
+		<!-- 显示商品资料 配置 -->
+		<action name="bar" class="showBarAction" method="findBar">
+			<result name="success">/bar.jsp</result>
+		</action>
+		<action name="showBarAction" class="showBarAction" method="findProject">
+			<result name="success">/bar.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="editBar" class="showBarAction" method="findByBarNo">
+			<result name="success">/editBar.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="export" class="showBarAction" method="findBar">
+			<result name="success">/exportBar.jsp</result>
+		</action>
+		<action name="updateBar" class="showBarAction" method="alter">
+			<result name="success" type="redirectAction">bar</result>
+		</action>
+		<action name="deleteBar" class="showBarAction" method="deleteBar">
+		</action>
+		<action name="exportBar" class="showBarAction" method="findProjectAndExport">
+			<result name="success" type="stream">
+				<!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找 -->
+				<param name="contentType">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</param>
+				<!-- 返回流 excelStream为action中的流变量名称 -->
+				<param name="inputName">downloadBarFile</param>
+				<!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。 fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量 -->
+				<param name="contentDisposition">attachment;fileName="${downloadName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 显示类目资料 配置 -->
+		<action name="class" class="showGoodsAction" method="findAll">
+			<result name="success">/class.jsp</result>
+			<result name="error">/class.jsp</result>
+		</action>
+		<action name="showClassByName" class="showGoodsAction" method="findByName">
+			<result name="success">/class.jsp</result>
+
+		</action>
+		<action name="editClass" class="showGoodsAction" method="findById">
+			<result name="success">/editClass.jsp</result>
+		</action>
+		<action name="updateClass" class="showGoodsAction" method="alterGoods">
+			<result name="success" type="redirectAction">class</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="deleteClass" class="showGoodsAction" method="deleteGoods">
+			<result name="success" type="redirectAction">class</result>
+		</action>
+		<action name="addClass" class="showGoodsAction" method="addGoods">
+			<result name="success" type="redirectAction">class</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 更新 Bar and Goods 配置 -->
+		<action name="updateBarAndGoods" class="updateBarAndGoodsAction"
+			method="updateBarAndGoods">
+			<!-- 使用文件上传拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 设置文件大小(8M) -->
+				<param name="maximumSize">80000000</param>
+				<!-- 设置文件类型 -->
+				<param name="allowedTypes">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel
+				</param>
+				<!-- <param name="allowedTypes">application/excel,application/vnd.ms-excel</param> -->
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<!-- 动态设置Action中的savePath属性的值 -->
+			<param name="savePath">/upload</param>
+		</action>
+
+	</package>
+</struts>    

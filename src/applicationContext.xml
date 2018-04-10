@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<!-- c3p0配置 destroy-method="close"的作用是当数据库连接不使用的时候,就把该连接重新放到数据池中, 方便下次使用调用 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl"
+			value="jdbc:mysql://127.0.0.1:3306/zasalife?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="root"></property>
+
+		<!-- 连接池中保留的最小连接数。 -->
+		<property name="minPoolSize" value="10" />
+		<!-- 连接池中保留的最大连接数。 -->
+		<property name="maxPoolSize" value="100" />
+		<!-- 最大空闲时间,超过该时间则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="1800" />
+		<!-- 当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。 -->
+		<property name="acquireIncrement" value="3" />
+		<!-- JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。 -->
+		<property name="maxStatements" value="100" />
+		<!-- 初始化时获取10个连接，取值应在minPoolSize与maxPoolSize之间。 -->
+		<property name="initialPoolSize" value="10" />
+		<!-- 每隔多少秒检查所有连接池中的空闲连接。 -->
+		<property name="idleConnectionTestPeriod" value="18000" />
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts" value="30" />
+		  <property name="acquireRetryDelay" value="100" />
+		<!--获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试获取连接失败后该数据源将申明已断开并永久关闭。Default: 
+			false -->
+		<property name="breakAfterAcquireFailure" value="true" />
+		<!-- 因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable等方法来提升连接测试的性能。Default: 
+			false -->
+		<property name="testConnectionOnCheckout" value="true" />
+        <property name="testConnectionOnCheckin" value="true" /> 
+        <property name="preferredTestQuery" value="SELECT 1"/>   
+         
+	</bean>
+	<!-- 配置SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			<prop key="hibernate.show_sql">true</prop> 
+			<prop key="hibernate.format_sql">true</prop> 
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/wd/models/TbBar.hbm.xml</value>
+				<value>com/wd/models/TbClass.hbm.xml</value>
+				<value>com/wd/models/TbGoods.hbm.xml</value>
+				<value>com/wd/models/TbReturns.hbm.xml</value>
+				<value>com/wd/models/TbSales.hbm.xml</value>
+				<value>com/wd/models/TbSpecial.hbm.xml</value>
+				<value>com/wd/models/TbUser.hbm.xml</value>
+				<value>com/wd/models/TbStock.hbm.xml</value>
+				<value>com/wd/models/TbBwl.hbm.xml</value>
+				<value>com/wd/models/TbGg.hbm.xml</value></list>
+		</property>
+	</bean>
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 配置事务生效的方法 -->
+	<bean id="txTemplate"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager" ref="transactionManager"></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="deleteSpecial">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 配置事务异常封装 -->
+	<bean id="persistenceExceptionTranslationPostProcessor"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<!-- 结束 -->
+
+
+	<!-- 配置会话工厂 -->
+	<bean id="baseDAO" class="com.wd.dao.baseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<!-- 档期资料显示 -->
+	<bean id="SpecialDAO" class="com.wd.dao.impl.SpecialDAO" parent="baseDAO"></bean>
+	<bean id="SpecialService" class="com.wd.service.impl.SpecialService">
+		<property name="dao" ref="SpecialDAO"></property>
+	</bean>
+	<bean id="SpecialAction" class="com.wd.action.SpecialAction">
+		<property name="specialService" ref="SpecialService"></property>
+	</bean>
+	<!-- 结束档期资料 -->
+
+	<!-- 销售资料 -->
+	<bean id="SalesDAO" class="com.wd.dao.impl.SalesDAO" parent="baseDAO"></bean>
+	<bean id="SalesService" class="com.wd.service.impl.SalesService">
+	   <property name="barDao" ref="showBarDAO"></property>
+		<property name="dao" ref="SalesDAO"></property>
+	</bean>
+	<bean id="SalesAction" class="com.wd.action.SalesAction">
+		<property name="specialService" ref="SpecialService"></property>
+		<property name="saleService" ref="SalesService"></property>
+	</bean>
+	<!-- 结束销售资料 -->
+
+	<!-- 客退资料 -->
+	<bean id="ReturnsDAO" class="com.wd.dao.impl.ReturnsDAO" parent="baseDAO"></bean>
+	<bean id="ReturnsService" class="com.wd.service.impl.ReturnsService">
+		<property name="dao" ref="ReturnsDAO"></property>
+	</bean>
+	<bean id="ReturnsAction" class="com.wd.action.ReturnsAction">
+		<property name="service" ref="ReturnsService"></property>
+	</bean>
+
+	<!-- 实时库存 -->
+	<bean id="StockDAO" class="com.wd.dao.impl.StockDAO" parent="baseDAO"></bean>
+	<bean id="StockService" class="com.wd.service.impl.StockService">
+		<property name="dao" ref="StockDAO"></property>
+	</bean>
+	<bean id="StcokAction" class="com.wd.action.StockAction">
+		<property name="iStockService" ref="StockService"></property>
+	</bean>
+
+
+	<!-- 更新资料 -->
+	<!-- 销售资料更新 -->
+	<bean id="updateAction" class="com.wd.action.UpdateAction">
+		<property name="iSalesService" ref="SalesService"></property>
+		<property name="iReturnsService" ref="ReturnsService"></property>
+		<property name="iStockService" ref="StockService"></property>
+	</bean>
+	<!-- 结束资料更新 -->
+
+	<!-- 首页action -->
+	<bean id="IndexDAO" class="com.wd.dao.impl.IndexDAO" parent="baseDAO"></bean>
+	<bean id="IndexService" class="com.wd.service.impl.IndexService">
+		<property name="dao" ref="IndexDAO"></property>
+	</bean>
+	<bean id="IndexAction" class="com.wd.action.IndexAction">
+		<property name="iIndexService" ref="IndexService"></property>
+	</bean>
+	<!-- 用户模块 -->
+	<bean id="UserDAO" class="com.wd.dao.impl.UserDAO" parent="baseDAO"></bean>
+	<bean id="UserService" class="com.wd.service.impl.UserService">
+		<property name="dao" ref="UserDAO"></property>
+	</bean>
+	<bean id="UserAction" class="com.wd.action.UserAction">
+		<property name="iUserService" ref="UserService"></property>
+	</bean>
+
+	<bean id="showBarDAO" class="com.wd.dao.impl.ShowBarDAO" parent="baseDAO"></bean>
+	<bean id="showBarService" class="com.wd.service.impl.ShowBarService"
+		p:showBarDAO-ref="showBarDAO"></bean>
+	<bean id="showBarAction" class="com.wd.action.ShowBarAction"
+		p:showBarService-ref="showBarService"></bean>
+
+	<bean id="showGoodsDAO" class="com.wd.dao.impl.ShowGoodsDAO"
+		parent="baseDAO"></bean>
+	<bean id="showGoodsService" class="com.wd.service.impl.ShowGoodsService"
+		p:showGoodsDAO-ref="showGoodsDAO"></bean>
+	<bean id="showGoodsAction" class="com.wd.action.ShowGoodsAction"
+		p:showGoodsService-ref="showGoodsService"></bean>
+
+	<bean id="updateBarAndGoodsDAO" class="com.wd.dao.impl.UpdateBarAndGoodsDAO"
+		parent="baseDAO"></bean>
+	<bean id="updateBarAndGoodsService" class="com.wd.service.impl.UpdateBarAndGoodsService"
+		p:updateBarAndGoodsDAO-ref="updateBarAndGoodsDAO"
+		p:readBarAndGoods-ref="readBarAndGoods"></bean>
+	<bean id="updateBarAndGoodsAction" class="com.wd.action.UpdateBarAndGoodsAction"
+		p:updateBarAndGoodsService-ref="updateBarAndGoodsService"></bean>
+
+	<bean id="readBarAndGoods" class="com.wd.utils.ReadBarAndGoods"></bean>
+
+
+</beans>
